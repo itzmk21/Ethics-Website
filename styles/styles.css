@@ -1,0 +1,210 @@
+/* custom font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+/* animations */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* variables */
+:root {
+  --primary-color: #0bab64;
+  --gradient: linear-gradient(#0bab64, #3bb78f);
+  --zoom: scale(1.03);
+  --transition-zoom: transform 0.2s;
+  --border-radius: 1.3em;
+}
+
+/* custom color for when a user selects a class using a pseudo-class */
+::selection {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-image: url("../assets/home.png");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+p,
+ol,
+.card li {
+  font-size: 1.3rem;
+}
+li {
+  font-size: 1.1rem;
+}
+
+.heading {
+  font-size: 6rem;
+  font-weight: bolder;
+  text-align: center;
+  color: var(--primary-color);
+  mix-blend-mode: screen;
+  text-decoration: 0.5rem underline;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 1em;
+  width: 17%;
+  height: 100%;
+  background-image: var(--gradient);
+  position: fixed;
+  list-style-type: none;
+}
+
+.menu li a {
+  display: block;
+  color: rgba(255, 255, 255, 0.705);
+  padding: 1em;
+  text-decoration: none;
+  transition: var(--transition-zoom);
+}
+
+.menu li a.active {
+  color: white;
+  font-weight: bolder;
+}
+
+.menu li a:hover {
+  transform: var(--zoom);
+  color: white;
+}
+
+.container {
+  margin-left: 19%;
+  padding: 2em;
+  height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 1.3rem;
+  margin: 1em;
+  margin-bottom: 3em;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 2);
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
+
+.card :not(.card > img) {
+  animation: fadeIn;
+  animation-duration: 1.3s;
+}
+.card.loaded {
+  opacity: 1;
+}
+
+.card-header {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 1.3rem;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1rem;
+  margin-left: 10px;
+}
+
+.card-header > h1 {
+  flex-direction: column;
+  margin-left: 1em;
+  position: relative;
+  margin-left: 1.3em;
+}
+
+.card-header > img {
+  position: absolute;
+  margin-top: 1.4em;
+  margin-right: 1.2em;
+}
+
+#enquiry-form > input:not(.btn),
+textarea {
+  padding: 16px;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  border-radius: 0.8em;
+  border: 0.1px solid;
+  outline: var(--primary-color);
+}
+
+#enquiry-form > label {
+  font-size: 1.5rem;
+}
+
+#enquiry-form > .btn {
+  font-family: "Montserrat", sans-serif;
+  padding: 12px;
+  font-size: 1.2rem;
+  border-radius: 0.8em;
+  margin: 2px;
+  transition: var(--transition-zoom);
+  font-weight: bolder;
+  background-color: #fff;
+  border: 0.5px solid;
+}
+
+.submit {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.clear {
+  color: rgb(189, 4, 4);
+  border-color: rgb(189, 4, 4);
+}
+
+#enquiry-form > .btn:hover {
+  transform: var(--zoom);
+  color: white;
+  border: 0;
+}
+
+#enquiry-form .submit:hover {
+  background-color: var(--primary-color);
+}
+
+#enquiry-form .clear:hover {
+  background-color: rgb(189, 4, 4);
+}
+
+.image {
+  margin: 2em;
+  border-radius: var(--border-radius);
+  transition: transform 2s;
+}
+
+.image:hover {
+  transform: var(--zoom);
+}
+
+.card-body li {
+  padding: 10px;
+}

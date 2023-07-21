@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="EcoTech - Discussing the Impact of Technology" />
+
+    <title>EcoTech - Home</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="script/script.js" async></script>
+
+    <link href="assets/icon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  </head>
+  <body>
+    <div class="menu">
+      <ul>
+        <li><a class="active" href="index.html" title="Home page">Home</a></li>
+        <li><a href="computers-in-the-workforce.html" title="Computers in the Workforce">Computers in the Workforce</a></li>
+        <li><a href="automated-decision-making.html" title="Automated Decision Making">Automated Decision Making</a></li>
+        <li><a href="ai.html" title="A.I">Artificial Intelligence</a></li>
+        <li><a href="env.html" title="Environmental Effects">Environmental Effects</a></li>
+        <li><a href="ethical.html" title="Ethical, Moral, Cultural Issues">Ethical issues</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <h1 class="heading" style="font-size: 7rem;">EcoTech</h1>
+
+      <div class="card loaded">
+        <div class="card-header">
+          <img src="assets/leaf-outline.svg" width="35" height="35" />
+          <h1>EcoTech - Impact of Technology</h1>
+        </div>
+        <div class="card-body">
+          <h3>We aim to spread awareness of both the marvellous advantages of computers and technology, however we also aim to inform the public about the impact and consequences of this technology.</h3>
+          <p>This includes:</p>
+          <ol>
+            <li>Computers in the Workforce</li>
+            <li>Automated Decision Making</li>
+            <li>Artificial Intelligence</li>
+            <li>Environmental Effects</li>
+            <li>Ethical issues</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="card loaded" id="form-card">
+        <div class="card-header">
+          <img src="assets/info.svg" width="35" height="35" />
+          <h1>Enquiry</h1>
+        </div>
+        <div class="card-body">
+          <form name="form" id="enquiry-form" action="#">
+            <label for="name">Name</label><br />
+            <input onfocus="this.placeholder=''" type="text" style="margin-top: 16px; margin-bottom: 16px; width: 700px; height: 1.5em" id="name" name="name" placeholder="John Doe" /><br />
+            <label for="email">Email</label><br />
+            <input onfocus="this.placeholder=''" type="email" style="margin-top: 16px; margin-bottom: 16px; width: 700px; height: 1.5em" id="email" name="email" placeholder="john.doe123@domain.com" /><br /><br />
+            <label for="enquiry">Enquiry</label><br />
+            <textarea onfocus="this.placeholder=''" id="enquiry" style="margin-top: 16px; margin-bottom: 16px; width: 700px; height: 1.5em; height: 200px" name="text" placeholder="I would like to join this organisation..."></textarea><br />
+
+            <input type="submit" value="Submit" class="btn submit" onclick="validateForm();" />
+            <input type="reset" value="Clear" class="btn clear" />
+          </form>
+        </div>
+      </div>
+      <br></br>
+    </div>
+  </body>
+</html>
